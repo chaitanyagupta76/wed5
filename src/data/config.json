@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "hero": true,
+    "brideGroom": true,
+    "venue": true,
+    "countdown": true,
+    "timeline": true,
+    "livestream": true,
+    "gallery": true,
+    "presence": true
+  },
+  "metadata": {
+    "title": "Abhishek & Bhavana's Wedding",
+    "coupleNames": "Abhishek & Bhavana",
+    "weddingDate": "November 25th, 2025"
+  },
+  "remoteUris": {
+    "en": null,
+    "te": null
+  }
+}

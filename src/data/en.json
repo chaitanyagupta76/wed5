@@ -1,0 +1,86 @@
+{
+  "common": {
+    "welcome": "Welcome to our beautiful beginning",
+    "brideGroomLabel": "Bride & Groom",
+    "theBride": "The Bride",
+    "theGroom": "The Groom",
+    "joinUs": "Join us for",
+    "location": "Location",
+    "time": "Time"
+  },
+  "hero": {
+    "title": "Celebrating the Love of",
+    "subtitle": "Join us for our special day"
+  },
+  "brideGroom": {
+    "groom": "Abhishek",
+    "bride": "Bhavana",
+    "groomParents": "S/o Mr. & Mrs. Rakesh Sharma",
+    "brideParents": "D/o Mr. & Mrs. Suresh Reddy"
+  },
+  "venue": {
+    "title": "Venue & Reception",
+    "locations": [
+      {
+        "name": "Marriage Ceremony",
+        "address": "Grand Ballroom, Fairmont, Hyderabad",
+        "time": "Nov 25, 2025 • 9:30 AM",
+        "button": "View Directions"
+      },
+      {
+        "name": "Wedding Reception",
+        "address": "Lawn Area, Fairmont, Hyderabad",
+        "time": "Nov 25, 2025 • 7:00 PM",
+        "button": "View Directions"
+      }
+    ]
+  },
+  "countdown": {
+    "title": "Countdown to our Big Day",
+    "targetDate": "2025-11-25T09:30:00",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "timeline": {
+    "title": "Our Journey",
+    "events": [
+      {
+        "title": "Engagement",
+        "date": "Oct 15, 2025",
+        "time": "10:00 AM",
+        "description": "A beautiful beginning of forever."
+      },
+      {
+        "title": "Mehndi",
+        "date": "Nov 23, 2025",
+        "time": "4:00 PM",
+        "description": "Colors and joy with family."
+      },
+      {
+        "title": "Wedding Ceremony",
+        "date": "Nov 25, 2025",
+        "time": "9:30 AM",
+        "description": "The sacred union."
+      }
+    ]
+  },
+  "livestream": {
+    "title": "Live Stream",
+    "button": "Join Live"
+  },
+  "gallery": {
+    "title": "Our Memories"
+  },
+  "presence": {
+    "title": "We request the honor of your presence",
+    "brideParents": "Parents of the Bride",
+    "brideParentsNames": "Mr. & Mrs. Suresh Reddy",
+    "groomParents": "Parents of the Groom",
+    "groomParentsNames": "Mr. & Mrs. Rakesh Sharma"
+  },
+  "footer": {
+    "copyright": "Made with ❤️ by Event Macha"
+  }
+}
