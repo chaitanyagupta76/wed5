@@ -8,7 +8,7 @@ const cormorant = Cormorant_Garamond({ weight: ['300', '400', '500', '600', '700
 const notoSansTelugu = Noto_Sans_Telugu({ weight: ['400', '500', '700'], subsets: ['telugu'], variable: '--font-telugu' });
 
 export const metadata = {
-  title: "Naveen & Chandrika's Wedding",
+  title: "Abhishek & Bhavana's Wedding",
   description: "Welcome to our beautiful beginning",
 };
 
