@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { getTranslations, getConfig, getImages } from '@/lib/fetchData';
 import Header from '@/components/common/Header';
 import Splash from '@/components/common/Splash';
@@ -13,18 +17,31 @@ import LiveStream from '@/components/sections/LiveStream';
 import Gallery from '@/components/sections/Gallery';
 import Presence from '@/components/sections/Presence';
 
-export default async function WeddingPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
-  const resolvedParams = await searchParams;
-  const lang = (resolvedParams.lang as string) || 'en';
+function WeddingContent() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get('lang') || 'en';
 
-  const translations = await getTranslations(lang);
-  const config = await getConfig();
-  const images = await getImages();
+  const [data, setData] = useState<{ translations: any, config: any, images: any } | null>(null);
 
+  useEffect(() => {
+    let isMounted = true;
+    async function load() {
+      const [translations, config, images] = await Promise.all([
+        getTranslations(lang),
+        getConfig(),
+        getImages()
+      ]);
+      if (isMounted) {
+        setData({ translations, config, images });
+      }
+    }
+    load();
+    return () => { isMounted = false; };
+  }, [lang]);
+
+  if (!data) return <div className="min-h-screen bg-background-main flex items-center justify-center">Loading...</div>;
+
+  const { translations, config, images } = data;
   const { sections, metadata } = config;
 
   return (
@@ -95,5 +112,13 @@ export default async function WeddingPage({
         metadata={metadata} 
       />
     </main>
+  );
+}
+
+export default function WeddingPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-background-main flex items-center justify-center">Loading...</div>}>
+      <WeddingContent />
+    </Suspense>
   );
 }
